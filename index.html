@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Todos</h1>
+      <form class="todo-form" id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          class="todo-input"
+          placeholder="What needs to be done?"
+          autofocus
+        >
+      </form>
+    </header>
+
+    <main class="main" id="main">
+      <div class="toggle-all-container">
+        <input type="checkbox" id="toggle-all" class="toggle-all">
+        <label for="toggle-all" class="toggle-all-label">Mark all as complete</label>
+      </div>
+      <ul class="todo-list" id="todo-list"></ul>
+    </main>
+
+    <footer class="footer" id="footer">
+      <span class="todo-count" id="todo-count"></span>
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <button class="clear-completed" id="clear-completed">Clear completed</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
